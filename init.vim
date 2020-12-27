@@ -8,6 +8,8 @@ Plug 'https://github.com/posva/vim-vue'
 Plug 'tpope/vim-fugitive'
 Plug 'morhetz/gruvbox'
 Plug 'mattn/emmet-vim'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 
