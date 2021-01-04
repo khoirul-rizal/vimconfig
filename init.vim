@@ -10,6 +10,7 @@ Plug 'morhetz/gruvbox'
 Plug 'mattn/emmet-vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -28,24 +29,10 @@ map ,d "md
 map <leader>c "+y
 map <leader>y "+y
 map <leader>p "+gp
+set updatetime=100
+source ~/.config/nvim/plugconf/gitgutter.vim
+source ~/.config/nvim/plugconf/coc.vim
 
-" coc
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-function! s:check_back_space() abort
-	  let col = col('.') - 1
-	    return !col || getline('.')[col - 1]  =~# '\s'
-    endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
- inoremap <silent><expr> <c-@> coc#refresh()
-endif
     
 let g:fzf_action = {
       \ 'ctrl-t': 'tab split',
