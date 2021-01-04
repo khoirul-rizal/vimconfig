@@ -30,7 +30,7 @@ map <leader>c "+y
 map <leader>y "+y
 map <leader>p "+gp
 set updatetime=100
-set colorcolumn=120
+set colorcolumn=100
 highlight ColorColumn ctermbg=red guibg=red
 source ~/.config/nvim/plugconf/gitgutter.vim
 source ~/.config/nvim/plugconf/coc.vim
