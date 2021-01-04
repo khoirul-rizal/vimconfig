@@ -30,12 +30,8 @@ map <leader>c "+y
 map <leader>y "+y
 map <leader>p "+gp
 set updatetime=100
+set colorcolumn=120
+highlight ColorColumn ctermbg=red guibg=red
 source ~/.config/nvim/plugconf/gitgutter.vim
 source ~/.config/nvim/plugconf/coc.vim
-
-    
-let g:fzf_action = {
-      \ 'ctrl-t': 'tab split',
-      \ 'ctrl-x': 'split',
-      \ 'ctrl-v': 'vsplit' }
-    
+source ~/.config/nvim/plugconf/fzf.vim
