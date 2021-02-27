@@ -11,6 +11,9 @@ Plug 'mattn/emmet-vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'airblade/vim-gitgutter'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'vitalk/vim-simple-todo'
 
 call plug#end()
 
@@ -25,13 +28,17 @@ set shiftwidth=2
 map <C-p> :GFiles <return>
 map <leader><C-P> :Files <return>
 map ,<space> :CocCommand eslint.executeAutofix <return>
-map ,d "md
 map <leader>c "+y
 map <leader>y "+y
 map <leader>p "+gp
+imap jj <Esc>
+imap jk <Esc>:w <return>
+map ,d :DartFmt <return>
+vmap o <Esc>
 set updatetime=100
-set colorcolumn=100
+set colorcolumn=120
 highlight ColorColumn ctermbg=red guibg=red
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 source ~/.config/nvim/plugconf/gitgutter.vim
 source ~/.config/nvim/plugconf/coc.vim
 source ~/.config/nvim/plugconf/fzf.vim
